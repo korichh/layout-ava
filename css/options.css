@@ -1,0 +1,420 @@
+/*=============== Fonts ====================================================================================================================================================================*/
+
+@font-face {
+  font-family: "Roboto";
+  font-display: swap;
+  src: url("../fonts/roboto400.woff") format("woff"), url("../fonts/roboto400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald";
+  font-display: swap;
+  src: url("../fonts/oswald400.woff") format("woff"), url("../fonts/oswald400.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+/*=============== /Fonts ====================================================================================================================================================================*/
+
+/*=============== Nullstyle ====================================================================================================================================================================*/
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  line-height: 22px;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+li {
+  list-style-type: none;
+}
+
+a,
+button {
+  display: inline-block;
+}
+
+input,
+textarea,
+button {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
+
+/*=============== /Nullstyle ====================================================================================================================================================================*/
+
+/*=============== Options ====================================================================================================================================================================*/
+
+body {
+  font-family: "Oswald";
+  color: #000;
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  min-height: 100%;
+  min-width: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1 1 auto;
+  margin-top: 80px;
+}
+
+.container {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/*=============== /Options ====================================================================================================================================================================*/
+
+/*=============== IBG ====================================================================================================================================================================*/
+
+.ibg {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+.ibg img {
+  display: none;
+}
+
+/*=============== /IBG ====================================================================================================================================================================*/
+
+/*=============== Common Styles ====================================================================================================================================================================*/
+
+._title {
+  font-size: 40px;
+  line-height: 48px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+._text {
+  font-size: 16px;
+  line-height: 26px;
+  font-family: "Roboto";
+}
+
+._subtitle {
+  font-size: 20px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+._subtext {
+  font-size: 12px;
+  line-height: 22px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #0057FF;
+}
+
+._button {
+  position: relative;
+  line-height: 24px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  display: block;
+  border-radius: 30px;
+  padding: 14px 40px;
+  transition: all 0.3s ease 0s;
+}
+
+._button:hover {
+  transform: translateY(-2px);
+}
+
+._button:active {
+  transform: scale(0.95);
+}
+
+/*=============== /Common Styles ====================================================================================================================================================================*/
+
+/*=============== Animation ====================================================================================================================================================================*/
+
+.animLeft {
+  transform: translateX(-100px);
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.animBottom {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.animRight {
+  transform: translateX(100px);
+  opacity: 0;
+  transition: all 0.3s ease 0s;
+}
+
+._anim {
+  transform: translate(0) scale(1);
+  opacity: 1;
+}
+
+/*=============== /Animation ====================================================================================================================================================================*/
+
+/*=============== Loading ====================================================================================================================================================================*/
+
+.loading {
+  position: fixed;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease 0s;
+}
+
+.loading p {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.lds-ellipsis {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.lds-ellipsis div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #FFA332;
+  -webkit-animation-timing-function: cubic-bezier(0, 1, 1, 0);
+          animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.lds-ellipsis div:nth-child(1) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis1 0.6s infinite;
+          animation: lds-ellipsis1 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(2) {
+  left: 8px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(3) {
+  left: 32px;
+  -webkit-animation: lds-ellipsis2 0.6s infinite;
+          animation: lds-ellipsis2 0.6s infinite;
+}
+
+.lds-ellipsis div:nth-child(4) {
+  left: 56px;
+  -webkit-animation: lds-ellipsis3 0.6s infinite;
+          animation: lds-ellipsis3 0.6s infinite;
+}
+
+@-webkit-keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0);
+  }
+}
+
+@-webkit-keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(24px, 0);
+  }
+}
+
+/*=============== /Loading ====================================================================================================================================================================*/
+
+/*=============== Pointer ====================================================================================================================================================================*/
+
+@media (max-width: 1200px) {
+  ._title {
+    font-size: calc(24px + 16 * ((100vw - 320px) / 880));
+  }
+
+  ._title {
+    line-height: calc(32px + 16 * ((100vw - 320px) / 880));
+  }
+
+  ._text {
+    font-size: calc(14px + 2 * ((100vw - 320px) / 880));
+  }
+
+  ._text {
+    line-height: calc(20px + 6 * ((100vw - 320px) / 880));
+  }
+
+  ._subtitle {
+    font-size: calc(16px + 4 * ((100vw - 320px) / 880));
+  }
+
+  ._subtitle {
+    line-height: calc(22px + 8 * ((100vw - 320px) / 880));
+  }
+}
+
+@media (max-width: 991.98px) {
+  ._button {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}
+
+@media (pointer: fine) {
+  a,
+  button,
+  input[type=submit],
+  ._isButton {
+    cursor: pointer;
+  }
+}
+
+@media (pointer: coarse) {
+  a,
+  button,
+  input[type=submit],
+  ._isButton {
+    cursor: pointer;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
